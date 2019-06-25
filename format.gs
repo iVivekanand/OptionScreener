@@ -1,0 +1,64 @@
+function insertItmProbabilityScreenHeader() {
+  currentMonth.getRange("A2").setValue("Screen Date");
+  currentMonth.getRange("B2").setValue("Expiry");
+  currentMonth.getRange("C2").setValue("Scrip");
+  currentMonth.getRange("D2").setValue("Strike");
+  currentMonth.getRange("E2").setValue("Spot");
+  currentMonth.getRange("F2").setValue("Lot Size");
+  currentMonth.getRange("G2").setValue("CE Value");
+  currentMonth.getRange("H2").setValue("ITM Prob");
+  currentMonth.getRange("I2").setValue("PE Value");
+  currentMonth.getRange("J2").setValue("ITM Prob");
+  currentMonth.getRange("K2").setValue("Time to Expiry");
+  currentMonth.getRange("L2").setValue("Difference");
+  currentMonth.getRange("M2").setValue("Last Ask");
+  currentMonth.getRange("N2").setValue("LTP Spot");
+  currentMonth.getRange("O2").setValue("Current ITM Prob");
+  currentMonth.getRange("P2").setValue("Investment");
+  currentMonth.getRange("Q2").setValue("P/L");
+  currentMonth.getRange("R2").setValue("P/L After Expiry");
+  currentMonth.getRange("S2").setValue("Max Profit");
+  currentMonth.getRange("T2").setValue("Realized Profit");
+  currentMonth.getRange("U2").setValue("IV Strike");
+  currentMonth.getRange("V2").setValue("ATM IV");
+  currentMonth.getRange("W2").setValue("%ile Strike");
+  currentMonth.getRange("X2").setValue("%ile ATM");
+  currentMonth.getRange("Y2").setValue("IV Column");
+  currentMonth.getRange("Z2").setValue("Mean IV");
+}
+
+function formatItmProbabilitySheet() {
+  var range = analysis.getRange("AC1");
+  range = currentMonth.getRange("O1");
+  range.setNumberFormat('INR #,##,##0;(INR #,##,##0)');
+  range = currentMonth.getRange("M1:N1");
+  range.setNumberFormat('INR #,##,##0.00;(INR #,##,##0.00)');
+  range = currentMonth.getRange("S1:T1");
+  range.setNumberFormat("0.##%");
+  currentMonth.setColumnWidth(1,65);
+  currentMonth.setColumnWidth(2,65);
+  currentMonth.setColumnWidth(3,95);
+  currentMonth.setColumnWidth(4,55);
+  currentMonth.setColumnWidth(5,65);
+  currentMonth.setColumnWidth(6,50);
+  currentMonth.setColumnWidth(7,60);
+  currentMonth.setColumnWidth(8,60);
+  currentMonth.setColumnWidth(9,60);
+  currentMonth.setColumnWidth(10,60);
+  currentMonth.setColumnWidth(11,50);
+  currentMonth.setColumnWidth(12,60);
+  currentMonth.autoResizeColumn(13);
+  currentMonth.autoResizeColumn(14);
+  currentMonth.autoResizeColumn(15);
+  currentMonth.autoResizeColumn(16);
+  currentMonth.autoResizeColumn(17);
+  currentMonth.setColumnWidth(18,80);
+  currentMonth.setColumnWidth(19,65);
+  currentMonth.setColumnWidth(20,65);
+  currentMonth.setColumnWidth(21,65);
+  currentMonth.setColumnWidth(22,65);
+  currentMonth.setColumnWidth(23,65);
+  currentMonth.setColumnWidth(24,65);
+  currentMonth.setColumnWidth(25,65);
+  currentMonth.setColumnWidth(26,65);
+}
